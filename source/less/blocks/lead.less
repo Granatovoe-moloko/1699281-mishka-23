@@ -1,0 +1,35 @@
+.lead {
+  background: @light-gray url("../../img/main-background.jpg") no-repeat;
+  height: 416px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 73px;
+
+  &__text {
+    .font-sizes(27px; 30px);
+    text-align: center;
+    margin: 0;
+  }
+}
+
+.lead__link-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.lead__link {
+  padding: 24px 0 31px 30px;
+  display: inline-block;
+  .font-sizes(19px; 24px);
+  color: @white;
+  text-decoration: none;
+
+  &--interior {
+    background-color: @wave;
+  }
+
+  &--toys {
+    background-color: @dark-wave;
+  }
+}
