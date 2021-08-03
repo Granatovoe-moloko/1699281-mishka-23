@@ -21,23 +21,7 @@
   margin: 0;
   margin-top: 41px;
   .text-sizes(15px; 24px);
-  color: @gray;
-  font-weight: 400;
-}
-
-.features-list {
-  margin: 0;
-  margin-top: 28px;
-  display: grid;
-  grid-template-columns: 97px auto;
-  grid-template-rows: 40px 40px 40px;
-
-  &__item,
-  &__definition {
-    .text-sizes(15px; 39px);
-    color: @gray;
-    font-weight: 400;
-  }
+  .text400();
 }
 
 .week-product__image {
@@ -58,7 +42,7 @@
   color: @gray;
   background-color: @white;
   text-align: center;
-  font-family: "Open Sans", "Arial", sans-serif;
+  .font-family();
   font-weight: 700;
   margin-top: 25px;
 }

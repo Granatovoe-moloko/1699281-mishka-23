@@ -1,5 +1,6 @@
 /*colors*/
 @black: #000000;
+@black-30: rgba(0, 0, 0, 0.3);
 @dark: #231F20;
 @gray: #444444;
 @smoke-gray: #ECECEC;
@@ -12,6 +13,16 @@
 @white: #FFFFFF;
 
 /*mixins*/
+
+.font-family() {
+  font-family: "Open Sans", "Arial", sans-serif;
+}
+
+.text400() {
+  color: @gray;
+  font-weight: 400;
+}
+
 .text-sizes(@font-size; @line-height;) {
   font-size: @font-size;
   line-height: @line-height;
