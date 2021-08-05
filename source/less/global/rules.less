@@ -1,0 +1,34 @@
+/*colors*/
+@black: #000000;
+@black-30: rgba(0, 0, 0, 0.3);
+@dark: #231F20;
+@gray: #444444;
+@smoke-gray: #ECECEC;
+@light-gray: #F1F1F1;
+@light-wave: #62D1BA;
+@wave: #63D1BB;
+@dark-wave: #56C3B2;
+@light-green: #6BC6B3;
+@green: #149080;
+@white: #FFFFFF;
+
+/*mixins*/
+
+.font-family() {
+  font-family: "Open Sans", "Arial", sans-serif;
+}
+
+.text400() {
+  color: @gray;
+  font-weight: 400;
+}
+
+.text-sizes(@font-size; @line-height;) {
+  font-size: @font-size;
+  line-height: @line-height;
+}
+
+.sizes(@width; @height;) {
+  width: @width;
+  height: @height;
+}

@@ -3,31 +3,32 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page__body">
 
 
     <header class="header">
-      <section class="logo header-logo">
-        <a href="" class="logo__link">
+      <section class="logo header__logo">
+        <a href="index.html" class="logo__link">
           <img class="logo__image" src="img/mishka-logo-mobile.svg" width="86" height="35" alt="логотип сайта Мишка">
         </a>
       </section>
       <nav class="header-nav">
-        <h2 class="header-nav__heading">Меню сайта</h2>
+        <h2 class="header-nav__heading visually-hidden">Меню сайта</h2>
         <button class="header-nav__button" type="button"></button>
         <ul class="menu-list header-nav__list">
           <li class="menu-list__item">
-            <a href="">Каталог товаров</a>
+            <a class="menu-list__link" href="">Каталог товаров</a>
           </li>
           <li class="menu-list__item">
-            <a href="">Вязание на заказ</a>
+            <a class="menu-list__link" href="">Вязание на заказ</a>
           </li>
           <li class="menu-list__item">
-            <a href="">Поиск по сайту</a>
+            <a class="menu-list__link" href="">Поиск по сайту</a>
           </li>
           <li class="menu-list__item">
-            <a href="">Корзина: пока пуста</a>
+            <a class="menu-list__link" href="">Корзина: пока пуста</a>
           </li>
         </ul>
       </nav>
@@ -40,70 +41,74 @@
       </p>
 
       <form method="get" action="https://echo.htmlacademy.ru" class="form__order order">
-        <fieldset class="order__type type">
-          <legend class="type__title">ТИП</legend>
-          <input class="type__accessories" type="radio" name="type" id="accessories">
-          <label class="type__name type__name--accessories" for="accessories">Аксессуар для интерьера</label>
-          <input class="type__toy" type="radio" name="type" id="toy">
-          <label class="type__name type__name--toy" for="toy">Детская игрушка</label>
+        <fieldset class="order__fieldset type">
+          <legend class="order__title">ТИП</legend>
+          <div class="type__wrapper">
+            <input class="type__accessories" type="radio" name="type" id="accessories">
+            <label class="type__name type__name--accessories" for="accessories">Аксессуар для интерьера</label>
+          </div>
+          <div class="type__wrapper">
+            <input class="type__toy" type="radio" name="type" id="toy">
+            <label class="type__name type__name--toy" for="toy">Детская игрушка</label>
+          </div>
         </fieldset>
 
-        <fieldset class="order__color color">
-          <legend class="color__title">Цвет</legend>
+        <fieldset class="order__fieldset color">
+          <legend class="order__title">Цвет</legend>
           <ul class="color__list">
             <li class="color__item">
-              <input class="color__white" type="checkbox" name="white" id="white" checked>
-              <label class="color__name color__name--white" for="white">Белый</label>
+              <input class="color__checkbox" type="checkbox" name="white" id="white" checked>
+              <label class="color__name" for="white">Белый</label>
             </li>
             <li class="color__item">
-              <input class="color__gray" type="checkbox" name="gray" id="gray" checked>
-              <label class="color__name color__name--gray" for="gray">Серый</label>
+              <input class="color__checkbox" type="checkbox" name="gray" id="gray" checked>
+              <label class="color__name" for="gray">Серый</label>
             </li>
             <li class="color__item">
-              <input class="color__tiffany" type="checkbox" name="tiffany" id="tiffany">
-              <label class="color__name color__name--tiffany" for="tiffany">«Тиффани»</label>
+              <input class="color__checkbox" type="checkbox" name="tiffany" id="tiffany">
+              <label class="color__name" for="tiffany">«Тиффани»</label>
             </li>
             <li class="color__item">
-              <input class="color__black" type="checkbox" name="black" id="black">
-              <label class="color__name color__name--black" for="black">Черный</label>
+              <input class="color__checkbox" type="checkbox" name="black" id="black">
+              <label class="color__name" for="black">Черный</label>
             </li>
             <li class="color__item">
-              <input class="color__pink" type="checkbox" name="pink" id="pink">
-              <label class="color__name color__name--pink" for="pink">Розовый</label>
+              <input class="color__checkbox" type="checkbox" name="pink" id="pink">
+              <label class="color__name" for="pink">Розовый</label>
             </li>
             <li class="color__item">
-              <input class="color__orange" type="checkbox" name="orange" id="orange">
-              <label class="color__name color__name--orange" for="orange">Оранжевый</label>
+              <input class="color__checkbox" type="checkbox" name="orange" id="orange">
+              <label class="color__name" for="orange">Оранжевый</label>
             </li>
           </ul>
         </fieldset>
 
-        <fieldset class="order__user-info user-info">
-          <legend class="user-info__title">ФИО</legend>
+        <fieldset class="order__fieldset user-info">
+          <legend class="order__title">ФИО</legend>
           <ul class="user-info__list">
             <li class="user-info__item">
-              <label class="user-info__name user-info__name--name" for="name">Имя:</label>
-              <input class="user-info__user-name" type="text" name="name" id="name" placeholder="Введите ваше имя*">
+              <label class="user-info__name" for="name">Имя:</label>
+              <input class="user-info__input" type="text" name="name" id="name" placeholder="Введите ваше имя*">
             </li>
             <li class="user-info__item">
-              <label class="user-info__name user-info__name--surname" for="surname">Фамилия:</label>
-              <input class="user-info__surname" type="text" name="surname" id="surname" placeholder="Укажите фамилию*">
+              <label class="user-info__name" for="surname">Фамилия:</label>
+              <input class="user-info__input" type="text" name="surname" id="surname" placeholder="Укажите фамилию*">
             </li>
             <li class="user-info__item">
-              <label class="user-info__name user-info__name--patronymic" for="patronymic">Отчество:</label>
-              <input class="user-info__patronymic" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
+              <label class="user-info__name" for="patronymic">Отчество:</label>
+              <input class="user-info__input" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
             </li>
             <li class="user-info__item">
-              <label class="user-info__name user-info__name--phone" for="phone">тел</label>
-              <input class="user-info__phone" type="text" name="phone" id="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+              <label class="user-info__name--other" for="phone">тел</label>
+              <input class="user-info__input" type="text" name="phone" id="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
             </li>
             <li class="user-info__item">
-              <label class="user-info__name user-info__name--email" for="email">E-mail</label>
-              <input class="user-info__email" type="text" name="email" id="email" placeholder="Ваш Email*">
+              <label class="user-info__name--other" for="email">E-mail</label>
+              <input class="user-info__input" type="text" name="email" id="email" placeholder="Ваш Email*">
             </li>
             <li class="user-info__item">
-              <label class="user-info__name user-info__name--addition" for="addition">Доп</label>
-              <textarea class="user-info__addition" name="addition" id="addition" cols="30" rows="5">Опишите все ваши пожелания к заказу
+              <label class="user-info__name--other" for="addition">Доп</label>
+              <textarea class="user-info__input-addition" name="addition" id="addition" cols="30" rows="5">Опишите все ваши пожелания к заказу
               </textarea>
             </li>
           </ul>
@@ -115,7 +120,7 @@
 
     <footer class="footer">
       <h2 class="footer__heading">Мы в социальных сетях</h2>
-      <ul class="footer-socials socials">
+      <ul class="footer__socials socials">
         <li class="socials__item">
           <a href="">instagram</a>
         </li>
@@ -126,7 +131,7 @@
           <a href="">twitter</a>
         </li>
       </ul>
-      <div class="footer-copyright copyright">
+      <div class="footer__copyright copyright">
         <p class="copyright__descripion">Разработано</p>
         <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">HTMLacademy</a>
       </div>

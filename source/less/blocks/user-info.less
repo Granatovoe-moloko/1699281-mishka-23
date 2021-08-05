@@ -1,0 +1,41 @@
+.user-info__list {
+  list-style: none;
+  margin: 0;
+}
+
+.user-info__item {
+  display: flex;
+  flex-direction: column;
+
+  &:first-child .user-info__name {
+    margin-top: 29px;
+  }
+}
+
+.user-info__name {
+  .text-sizes(17px; 18px);
+  margin-top: 22px;
+
+  &--other {
+    .text-sizes(17px; 16px);
+    color: @wave;
+    margin-top: 35px;
+  }
+}
+
+.user-info__input {
+  height: 52px;
+  border: none;
+  border-bottom: 2px solid @gray;
+}
+
+.user-info__input-addition {
+  border: 2px solid @gray;
+}
+
+.user-info__note {
+  .text-sizes(14px; 16px);
+  .text400();
+  margin: 0;
+  margin-top: 17px;
+}

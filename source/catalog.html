@@ -3,31 +3,32 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page__body">
 
 
     <header class="header">
-      <section class="logo header-logo">
-        <a href="" class="logo__link">
+      <section class="logo header__logo">
+        <a href="index.html" class="logo__link">
           <img class="logo__image" src="img/mishka-logo-mobile.svg" width="86" height="35" alt="логотип сайта Мишка">
         </a>
       </section>
       <nav class="header-nav">
-        <h2 class="header-nav__heading">Меню сайта</h2>
+        <h2 class="header-nav__heading visually-hidden">Меню сайта</h2>
         <button class="header-nav__button" type="button"></button>
         <ul class="menu-list header-nav__list">
           <li class="menu-list__item">
-            <a href="">Каталог товаров</a>
+            <a class="menu-list__link" href="">Каталог товаров</a>
           </li>
           <li class="menu-list__item">
-            <a href="">Вязание на заказ</a>
+            <a class="menu-list__link" href="form.html">Вязание на заказ</a>
           </li>
           <li class="menu-list__item">
-            <a href="">Поиск по сайту</a>
+            <a class="menu-list__link" href="">Поиск по сайту</a>
           </li>
           <li class="menu-list__item">
-            <a href="">Корзина: пока пуста</a>
+            <a class="menu-list__link" href="">Корзина: пока пуста</a>
           </li>
         </ul>
       </nav>
@@ -37,40 +38,54 @@
       <h1 class="catalog__title">Каталог товаров</h1>
       <ul class="catalog__list">
         <li class="catalog__item article">
-          <h2 class="article__name article__name--rabbit">Зайчик-попрыгайчик</h2>
           <img class="article__image article__image--rabbit" src="img/products/rabbit.jpg" width="260" height="195" alt="вязаный белый зайка, одетый в голубое">
-          <p class="article__description article__description--rabbit">Рост 30 см, вес 200 г</p>
-          <p class="article__price article__price--rabbit">1 200 руб.</p>
-          <button class="article__button article__button--rabbit" type="button">добавить в корзину</button>
+          <div class="article__info">
+            <h2 class="article__name article__name--rabbit">Зайчик-попрыгайчик</h2>
+            <p class="article__description article__description--rabbit">Рост 30 см, вес 200 г</p>
+            <div class="article__purchase">
+              <p class="article__price article__price--rabbit">1 200 руб.</p>
+              <button class="article__button article__button--rabbit" type="button">добавить в корзину</button>
+            </div>
+          </div>
         </li>
         <li class="catalog__item article">
-          <h2 class="article__name article__name--laundry-basket">Корзинка для белья</h2>
           <img class="article__image article__image--laundry-basket" src="img/products/laundry-basket.jpg" width="260" height="195" alt="сверху белая снизу оранжевая вязаная корзинка, в которой лежат три свернутых полотенца">
-          <p class="article__description article__description--laundry-basket">Диаметр 15 см, высота 10 см</p>
-          <p class="article__price article__price--laundry-basket">690 руб.</p>
-          <button class="article__button article__button--laundry-basket" type="button">добавить в корзину</button>
+          <div class="article__info">
+            <h2 class="article__name article__name--laundry-basket">Корзинка для белья</h2>
+            <p class="article__description article__description--laundry-basket">Диаметр 15 см, высота 10 см</p>
+            <div class="article__purchase">
+              <p class="article__price article__price--laundry-basket">690 руб.</p>
+              <button class="article__button article__button--laundry-basket" type="button">добавить в корзину</button>
+            </div>
+          </div>
         </li>
         <li class="catalog__item article">
-          <h2 class="article__name article__name--big-basket">Большая корзинка для игрушек</h2>
           <img class="article__image article__image--big-basket" src="img/products/big-basket.jpg" width="260" height="195" alt="сверху белая снизу салатовая вязаная корзинка, в которой лежат вязаные игрушки">
-          <p class="article__description article__description--big-basket">Диаметр 30 см, высота 30 см</p>
-          <p class="article__price article__price--big-basket">1 500 руб.</p>
-          <button class="article__button article__button--big-basket" type="button">добавить в корзину</button>
+          <div class="article__info article__info--big-basket">
+            <h2 class="article__name article__name--big-basket">Большая корзинка для игрушек</h2>
+            <p class="article__description article__description--big-basket">Диаметр 30 см, высота 30 см</p>
+            <div class="article__purchase">
+              <p class="article__price article__price--big-basket">1 500 руб.</p>
+              <button class="article__button article__button--big-basket" type="button">добавить в корзину</button>
+            </div>
+          </div>
         </li>
       </ul>
 
       <section class="production">
-        <h2 class="production__title">Процесс производства</h2>
-        <img class="production__video video" src="img/products/video-mobile.jpg" width="260" height="150" alt="кадр из видео процесса производства, на котором изображена вязаная корзинка">
+        <h2 class="production__title">Процесс <br>производства</h2>
+        <img class="production__video" src="img/products/video-mobile.jpg" width="260" height="150" alt="кадр из видео процесса производства, на котором изображена вязаная корзинка">
         <button class="production__play" type="button">включить видео</button>
-        <p class="production__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-        <button class="production__order-button" type="button">Сделать заказ</button>
+        <div class="production__wrapper">
+          <p class="production__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <button class="production__order-button" type="button">Сделать заказ</button>
+        </div>
       </section>
     </main>
 
     <footer class="footer">
       <h2 class="footer__heading">Мы в социальных сетях</h2>
-      <ul class="footer-socials socials">
+      <ul class="footer__socials socials">
         <li class="socials__item">
           <a href="">instagram</a>
         </li>
@@ -81,14 +96,14 @@
           <a href="">twitter</a>
         </li>
       </ul>
-      <div class="footer-copyright copyright">
+      <div class="footer__copyright copyright">
         <p class="copyright__descripion">Разработано</p>
         <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">HTMLacademy</a>
       </div>
     </footer>
 
     <section class="popup">
-      <h2 class="popup-heading">Добавить в корзину</h2>
+      <h2 class="popup__heading">Добавить <br>в корзину</h2>
       <form class="popup__form" method="get" action="https://echo.htmlacademy.ru">
         <fieldset class="popup__chosen">
           <legend class="popup__text">Выберите размер:</legend>
