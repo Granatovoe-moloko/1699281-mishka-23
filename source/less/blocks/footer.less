@@ -1,4 +1,30 @@
-.footer {
+.footer__wrapper {
   background-color: @light-gray;
   padding: 25px 69px 23px 69px;
+}
+
+.footer__logo-link {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .footer {
+    width: @tablet-width;
+  }
+
+  .footer__wrapper {
+    padding: 51px 50px 58px 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer__logo-link {
+    display: block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .footer {
+    width: 100%;
+  }
 }

@@ -32,6 +32,7 @@
 .week-product__price {
   .text-sizes(17px; 24px);
   text-align: center;
+  margin: 0;
   margin-top: 26px;
 }
 
@@ -45,4 +46,114 @@
   .font-family();
   font-weight: 700;
   margin-top: 25px;
+}
+
+@media (min-width: @tablet-width) {
+  .week-product {
+    width: 668px;
+    padding-left: 50px;
+    padding-right: 50px;
+    position: relative;
+  }
+
+  .week-product__wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(5, auto);
+  }
+
+  .week-product__title {
+    .text-sizes(43px; 50px);
+    grid-column: ~"1/3";
+  }
+
+  .week-product__heading {
+    .sizes(100px; 34px);
+    .text-sizes(17px; 17px);
+    right: 13px;
+    top: 45px;
+  }
+
+  .week-product__text {
+    .text-sizes(17px; 30px);
+    .text400();
+    grid-column: ~"1/2";
+    margin: 0;
+    margin-top: 38px;
+  }
+
+  .week-product__price {
+    grid-column: ~"1/2";
+    .text-sizes(20px; 24px);
+    margin-top: 57px;
+  }
+
+  .week-product__order {
+    .sizes(292px; 52px);
+    grid-column: ~"1/2";
+    margin-top: 33px;
+  }
+
+  .week-product__image {
+    .sizes(334px; 404px);
+    grid-column: ~"2/3";
+    grid-row: ~"2/6";
+    margin-top: 51px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .week-product__wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 58px;
+    grid-template-rows: repeat(5, auto);
+    margin-left: 175px;
+  }
+
+  .week-product__heading {
+    top: 123px;
+    left: 32px;
+    text-align: center;
+    margin-top: 123px;
+    .text-sizes(17px; 17px);
+  }
+
+  .week-product__title {
+    .text-sizes(53px; 57px);
+    grid-column: ~"1/3";
+    grid-row: ~"1/2";
+    margin-top: 115px;
+    z-index: 1;
+  }
+
+  .week-product__text {
+    margin-top: 35px;
+    grid-column: ~"1/2";
+    grid-row: ~"2/3";
+    .text-sizes(17px; 30px);
+  }
+
+  .week-product__price {
+    .text-sizes(20px; 24px);
+    grid-column: ~"1/2";
+    grid-row: ~"4/5";
+    margin-top: 109px;
+  }
+
+  .week-product__order {
+    .sizes(292px; 52px);
+    .text-sizes(17px; 20px);
+    margin-top: 33px;
+    grid-column: ~"1/2";
+    grid-row: ~"5/6";
+  }
+
+  .week-product__image {
+    .sizes(525px; 636px);
+    grid-column: ~"2/3";
+    grid-row: ~"1/6";
+    margin-top: 54px;
+    justify-content: end;
+  }
 }

@@ -6,3 +6,22 @@
   .text-sizes(25px; 30px);
   margin: 0;
 }
+
+@media (min-width: @tablet-width) {
+  .about {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .about__heading {
+    .text-sizes(43px; 50px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about__heading {
+    .text-sizes(53px; 57px);
+    margin-left: 175px;
+    margin-top: 68px;
+  }
+}

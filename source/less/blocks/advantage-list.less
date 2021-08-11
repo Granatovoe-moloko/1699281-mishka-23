@@ -1,9 +1,25 @@
 .advantage-list {
   list-style: none;
   margin: 0;
+  padding: 0;
 }
 
 .advantage-list__item {
+  display: inline-block;
   .text-sizes(17px; 20px);
   margin-top: 83px;
+}
+
+@media (min-width: @tablet-width) {
+  .advantage-list {
+    column-count: 2;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantage-list {
+    column-count: 2;
+    margin-left: 175px;
+    margin-right: 175px;
+  }
 }
