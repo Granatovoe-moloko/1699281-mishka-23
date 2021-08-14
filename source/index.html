@@ -99,7 +99,7 @@
         </section>
       </div>
 
-      <div class="main__wrapper">
+      <div class="contacts__wrapper">
         <section class="contacts">
           <h2 class="contacts__heading">Контакты</h2>
           <dl class="contacts__list">
@@ -110,9 +110,14 @@
             <dt class="contacts__item">адрес:</dt>
             <dd class="contacts__adress">г. Санкт-Петербург <br>ул. Большая Конюшенная <br>д. 19/8, офис 101</dd>
           </dl>
-          <div class="contacts__map">
-            <img class="contacts__map-image" src="img/map.jpg" width="320" height="454" alt="карта с адресом г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101">
-          </div>
+        </section>
+      </div>
+
+      <div class="contacts__map">
+        <img class="contacts__map-image" src="img/map.jpg" width="320" height="454" alt="карта с адресом г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101">
+      </div>
+      <div class="contacts__feedback-wrapper">
+        <section class="contacts">
           <a href="" class="contacts__feedback">Напишите нам</a>
         </section>
       </div>
@@ -143,28 +148,30 @@
       </div>
     </footer>
 
-    <section class="popup">
-      <h2 class="popup__heading">Добавить в корзину</h2>
-      <form class="popup__form" method="get" action="https://echo.htmlacademy.ru">
-        <fieldset class="popup__chosen">
+    <div class="popup__wrapper">
+      <section class="popup">
+        <h2 class="popup__heading">Добавить в корзину</h2>
+        <form class="popup__form" method="get" action="https://echo.htmlacademy.ru">
+          <fieldset class="popup__chosen">
           <legend class="popup__text">Выберите размер:</legend>
-          <ul class="popup__list">
-            <li class="popup__item">
-              <input id="size-s" type="radio" name="product-size" value="size-s">
-              <label for="size-s">S</label>
-            </li>
-            <li class="popup__item">
-              <input id="size-m" type="radio" name="product-size" value="size-m">
-              <label for="size-m">M</label>
-            </li>
-            <li class="popup__item">
-              <input id="size-l" type="radio" name="product-size" value="size-l">
-              <label for="size-l">L</label>
-            </li>
-          </ul>
-        </fieldset>
-        <button class="popup__add" type="submit">Добавить</button>
-      </form>
-    </section>
+            <ul class="popup__list">
+              <li class="popup__item">
+                <input id="size-s" type="radio" name="product-size" value="size-s">
+                <label for="size-s">S</label>
+              </li>
+              <li class="popup__item">
+                <input id="size-m" type="radio" name="product-size" value="size-m">
+                <label for="size-m">M</label>
+              </li>
+              <li class="popup__item">
+                <input id="size-l" type="radio" name="product-size" value="size-l">
+                <label for="size-l">L</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="popup__add" type="submit">Добавить</button>
+        </form>
+      </section>
+    </div>
   </body>
 </html>

@@ -37,7 +37,7 @@
 }
 
 .week-product__order {
-  .sizes(260px; 52px);
+  .sizes(260px; 48px);
   .text-sizes(18px; 20px);
   border: 2px solid @gray;
   color: @gray;
@@ -46,6 +46,7 @@
   .font-family();
   font-weight: 700;
   margin-top: 25px;
+  padding: 0;
 }
 
 @media (min-width: @tablet-width) {
@@ -70,7 +71,7 @@
   .week-product__heading {
     .sizes(100px; 34px);
     .text-sizes(17px; 17px);
-    right: 13px;
+    right: 50px;
     top: 45px;
   }
 
@@ -111,9 +112,13 @@
     margin-left: 175px;
   }
 
+  .week-product {
+    width: @desktop-width;
+  }
+
   .week-product__heading {
     top: 123px;
-    left: 32px;
+    left: 82px;
     text-align: center;
     margin-top: 123px;
     .text-sizes(17px; 17px);

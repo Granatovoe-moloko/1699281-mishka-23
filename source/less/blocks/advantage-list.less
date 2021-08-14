@@ -5,14 +5,22 @@
 }
 
 .advantage-list__item {
-  display: inline-block;
   .text-sizes(17px; 20px);
   margin-top: 83px;
 }
 
 @media (min-width: @tablet-width) {
   .advantage-list {
-    column-count: 2;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 465px;
+  }
+
+  .advantage-list__item {
+    .text-sizes(20px; 22px);
+    margin-top: 110px;
+    width: 50%;
   }
 }
 

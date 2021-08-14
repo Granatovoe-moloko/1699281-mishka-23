@@ -1,4 +1,6 @@
 .lead {
+  width: @mobile-width;
+  margin: 0 auto;
   background: @light-gray url("../img/main-background.jpg") no-repeat;
   height: 416px;
   display: flex;
@@ -8,7 +10,8 @@
 }
 
 .lead__wrapper {
-  width: @mobile-width;
+  background-color: @light-gray;
+  width: 100%;
 }
 
 .lead__text {
@@ -41,18 +44,15 @@
 
 @media (min-width: @tablet-width) {
   .lead {
+    width: 668px;
     height: 757px;
     background-size: 100% auto;
-  }
-
-  .lead__wrapper {
-    width: @tablet-width;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   .lead__link-wrapper {
     flex-direction: row;
-    padding-left: 50px;
-    padding-right: 50px;
   }
 
   .lead__link {
@@ -67,11 +67,8 @@
 
 @media (min-width: @desktop-width) {
   .lead {
+    width: @desktop-width;
     height: 763px;
     background-size: 100% auto;
-  }
-
-  .lead__wrapper {
-    width: 100%;
   }
 }
