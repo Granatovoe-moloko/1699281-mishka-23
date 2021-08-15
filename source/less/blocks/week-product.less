@@ -1,18 +1,17 @@
 .week-product {
   padding: 30px;
   padding-bottom: 36px;
-  position: relative;
+  display: grid;
 }
 
 .week-product__heading {
   margin: 0;
   .text-sizes(17px; 20px);
   color: @wave;
-  position: absolute;
-  top: 65px;
 }
 
 .week-product__title {
+  order: -1;
   margin: 0;
   .text-sizes(25px; 30px);
 }
@@ -54,25 +53,25 @@
     width: 668px;
     padding-left: 50px;
     padding-right: 50px;
-    position: relative;
-  }
-
-  .week-product__wrapper {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 292px 334px;
+    column-gap: 42px;
     grid-template-rows: repeat(5, auto);
   }
 
   .week-product__title {
+    order: 0;
     .text-sizes(43px; 50px);
     grid-column: ~"1/3";
+    grid-row: ~"1/2";
   }
 
   .week-product__heading {
     .sizes(100px; 34px);
     .text-sizes(17px; 17px);
-    right: 50px;
-    top: 45px;
+    grid-column: ~"2/3";
+    grid-row: ~"1/2";
+    margin-left: auto;
   }
 
   .week-product__text {
@@ -90,7 +89,7 @@
   }
 
   .week-product__order {
-    .sizes(292px; 52px);
+    .sizes(288px; 48px);
     grid-column: ~"1/2";
     margin-top: 33px;
   }
@@ -104,44 +103,41 @@
 }
 
 @media (min-width: @desktop-width) {
-  .week-product__wrapper {
-    display: grid;
-    grid-template-columns: auto auto;
-    column-gap: 58px;
-    grid-template-rows: repeat(5, auto);
-    margin-left: 175px;
-  }
-
   .week-product {
     width: @desktop-width;
+    grid-template-columns: 175px 350px 525px;
+    grid-template-rows: repeat(5, auto);
+    padding: 0;
+    margin-top: 54px;
   }
 
   .week-product__heading {
-    top: 123px;
-    left: 82px;
+    margin-top: 61px;
+    margin-left: 32px;
+    grid-column: ~"1/2";
+    grid-row: ~"1/2";
     text-align: center;
-    margin-top: 123px;
     .text-sizes(17px; 17px);
   }
 
   .week-product__title {
     .text-sizes(53px; 57px);
-    grid-column: ~"1/3";
+    grid-column: ~"2/4";
     grid-row: ~"1/2";
-    margin-top: 115px;
+    margin-top: 61px;
     z-index: 1;
   }
 
   .week-product__text {
     margin-top: 35px;
-    grid-column: ~"1/2";
+    grid-column: ~"2/3";
     grid-row: ~"2/3";
     .text-sizes(17px; 30px);
   }
 
   .week-product__price {
     .text-sizes(20px; 24px);
-    grid-column: ~"1/2";
+    grid-column: ~"2/3";
     grid-row: ~"4/5";
     margin-top: 109px;
   }
@@ -150,15 +146,14 @@
     .sizes(292px; 52px);
     .text-sizes(17px; 20px);
     margin-top: 33px;
-    grid-column: ~"1/2";
+    grid-column: ~"2/3";
     grid-row: ~"5/6";
   }
 
   .week-product__image {
     .sizes(525px; 636px);
-    grid-column: ~"2/3";
+    grid-column: ~"3/4";
     grid-row: ~"1/6";
-    margin-top: 54px;
-    justify-content: end;
+    margin-top: 0;
   }
 }
