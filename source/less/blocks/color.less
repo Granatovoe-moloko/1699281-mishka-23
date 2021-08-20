@@ -1,6 +1,12 @@
+.color__fieldset-wrapper {
+  width: @mobile-width;
+  margin: 0 auto;
+}
+
 .color__list {
   list-style: none;
   margin: 0;
+  padding: 0;
 }
 
 .color__item {
@@ -13,4 +19,53 @@
 
 .color__name {
   .text-sizes(17px; 18px);
+}
+
+@media (min-width: @tablet-width) {
+  .color__wrapper {
+    background-color: @light-gray;
+  }
+
+  .color__title {
+    padding-top: 66px;
+  }
+
+  .color__fieldset-wrapper {
+    width: @tablet-width;
+  }
+
+  .color__list {
+    grid-column: ~"2/3";
+    grid-row: ~"1/2";
+    margin-top: -16px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 69px;
+  }
+
+  .color__item {
+    width: 50%;
+    margin-top: 57px;
+
+    &:first-child,
+    &:nth-child(2) {
+      margin-top: 0;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .color__fieldset-wrapper {
+    width: @desktop-width;
+  }
+
+  .color__item {
+    width: 33%;
+
+    &:first-child,
+    &:nth-child(2),
+    &:nth-child(3) {
+      margin-top: 0;
+    }
+  }
 }
