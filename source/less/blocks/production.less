@@ -1,6 +1,13 @@
 .production {
+  width: @mobile-width;
+  margin: 0 auto;
   margin-top: 30px;
   position: relative;
+}
+
+.production__container {
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .production__title {
@@ -22,7 +29,7 @@
 
 .production__wrapper {
   border: 1px solid @smoke-gray;
-  padding: 35px 34px 33px 34px;
+  padding: 35px 24px 33px 34px;
 }
 
 .production__text {
@@ -32,7 +39,7 @@
 }
 
 .production__order-button {
-  .sizes(192px; 52px);
+  .sizes(188px; 48px);
   .text-sizes(18px; 16px);
   border: 2px solid @gray;
   color: @gray;
@@ -42,4 +49,81 @@
   font-weight: 700;
   margin-top: 18px;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .production {
+    width: @tablet-width;
+  }
+
+  .production__container {
+    padding-left: 50px;
+    padding-right: 50px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 455px  90px auto;
+  }
+
+  .production__video {
+    .sizes(668px; 455px);
+    grid-row: ~"1/2";
+  }
+
+  .production__title {
+    grid-row: ~"2/3";
+    border-bottom: none;
+    .text-sizes(20px; 24px);
+    padding: 41px 107px 0 107px;
+  }
+
+  .production__wrapper {
+    grid-row: ~"3/4";
+    border-top: none;
+    padding: 25px 17px 46px 40px;
+  }
+
+  .production__text {
+    .text-sizes(15px; 30px);
+  }
+
+  .production__order-button {
+    .sizes(580px; 48px);
+    .text-sizes(17px; 16px);
+    margin-top: 41px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .production {
+    width: @desktop-width;
+  }
+
+  .production__container {
+    grid-template-columns: 683px 367px;
+    grid-template-rows: 144px auto;
+  }
+
+  .production__video {
+    .sizes(683px; 455px);
+    grid-column: ~"1/3";
+    grid-row: ~"1/2";
+  }
+
+  .production__title {
+    grid-column: ~"2/3";
+    grid-row: ~"1/2";
+    padding: 96px 110px 0 79px;
+  }
+
+  .production__wrapper {
+    grid-column: ~"2/3";
+    grid-row: ~"2/3";
+    padding: 28px 36px 60px 80px;
+  }
+
+  .production__order-button {
+    .sizes(226px; 48px);
+    .text-sizes(17px; 16px);
+    margin-top: 52px;
+  }
 }
