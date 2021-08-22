@@ -1,11 +1,41 @@
 .type__wrapper {
-  margin-top: 24px;
-
-  &:first-child {
-    margin-top: 42px;
-  }
+  width: @mobile-width;
+  margin: 0 auto;
 }
+
+.type__toy-container {
+  margin-top: 24px;
+}
+
+.type__accessories-container {
+  margin-top: 42px;
+}
+
 
 .type__name {
   .text-sizes(17px; 18px);
+}
+
+@media (min-width: @tablet-width) {
+  .type__wrapper {
+    width: @tablet-width;
+  }
+
+  .type__accessories-container {
+    margin-top: -16px;
+  }
+
+  .type__toy-container {
+    margin-top: 58px;
+  }
+
+  .type__name {
+    .text-sizes(19px; 18px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .type__wrapper {
+    width: @desktop-width;
+  }
 }

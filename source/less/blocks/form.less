@@ -1,5 +1,6 @@
-.form {
-  padding: 0 30px 55px 30px;
+.form__annotation-wrapper {
+  width: @mobile-width;
+  margin: 0 auto;
 }
 
 .form__title {
@@ -7,12 +8,48 @@
   background-color: @light-gray;
   padding: 74px 0;
   text-align: center;
-  margin: 0 -30px;
 }
 
 .form__annotation {
   .text-sizes(13px; 24px);
   .text400();
-  margin: 0;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 0 auto;
   margin-top: 17px;
+}
+
+@media (min-width: @tablet-width) {
+  .form__annotation-wrapper {
+    width: @tablet-width;
+  }
+
+  .form__annotation {
+    padding-left: 50px;
+    padding-right: 50px;
+    .text-sizes(17px; 30px);
+    margin-top: 54px;
+  }
+
+  .form__title {
+    .text-sizes(43px; 50px);
+    padding: 100px 0 75px 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__annotation-wrapper {
+    width: @desktop-width;
+  }
+
+  .form__annotation {
+    padding-left: 225px;
+    padding-right: 223px;
+    margin-top: 99px;
+  }
+
+  .form__title {
+    .text-sizes(53px; 57px);
+    padding: 102px 0 96px 0;
+  }
 }
