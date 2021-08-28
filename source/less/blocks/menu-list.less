@@ -2,6 +2,9 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  background-color: @white;
+  width: 100%;
+  z-index: 2; /*удали потом это свойство*/
 }
 
 .menu-list__item {
@@ -15,4 +18,49 @@
   color: @black;
   margin-left: 76px;
   text-align: center;
+}
+
+.menu-list__item:hover .menu-list__link {
+  opacity: 0.6;
+
+  & svg path {
+    fill: @wave;
+    opacity: 1;
+  }
+}
+
+.menu-list__item:active .menu-list__link {
+  opacity: 0.3;
+
+  & svg path {
+    opacity: 0.3;
+  }
+}
+
+.menu-list__item:last-child .menu-list__link,
+.menu-list__item:nth-last-child(2) .menu-list__link {
+  margin-left: 30px;
+}
+
+.header-nav--closed .menu-list {
+  display: none;
+}
+
+.header-nav--opened .menu-list {
+  display: block;
+  position: absolute;
+  top: 79px;
+}
+
+.header-nav--nojs .menu-list {
+  display: block;
+  position: static;
+}
+
+.menu-list__search,
+.menu-list__cart {
+  background-color: transparent;
+  border: none;
+  margin-right: 25px;
+  padding: 0;
 }

@@ -11,6 +11,27 @@
   margin-top: 14px;
 }
 
+.popup__item {
+  .sizes(78px; 48px);
+  border: 2px solid @gray-10;
+  text-align: center;
+
+  &:hover {
+    border: 2px solid @gray-30;
+  }
+
+  &:active {
+    border: 2px solid @light-wave;
+  }
+}
+
+.popup__label {
+  .text-sizes(17px; 16px);
+  display: block;
+  .sizes(100%; 33px);
+  padding-top: 15px;
+}
+
 .popup__chosen {
   border: none;
   margin: 0;
@@ -32,6 +53,7 @@
 .popup__list {
   list-style: none;
   display: flex;
+  justify-content: space-between;
   padding: 0;
   margin: 0;
   margin-top: 22px;
@@ -75,8 +97,11 @@
     margin-top: 20px;
   }
 
+  .popup__item {
+    .sizes(108px; 48px);
+  }
+
   .popup__add {
     .sizes(350px; 52px);
-    margin: 0 auto;
   }
 }
