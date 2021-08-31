@@ -1,7 +1,29 @@
 .socials {
+  width: 142px;
   list-style: none;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+}
+
+.socials__item {
+  flex-grow: 1;
+  height: 100%;
+  text-align: center;
+
+  &:hover svg path {
+    fill: @dark-hover-wave;
+  }
+
+  &:active svg path {
+    opacity: 0.3;
+  }
+}
+
+.socials__link {
+  display: block;
+  padding-top: 10px;
+  height: 100%;
 }

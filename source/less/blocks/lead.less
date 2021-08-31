@@ -28,18 +28,65 @@
 
 .lead__link {
   padding: 24px 0 31px 30px;
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
   .text-sizes(19px; 24px);
   color: @white;
   text-decoration: none;
 
   &--interior {
     background-color: @wave;
+    padding-right: 36px;
   }
 
   &--toys {
     background-color: @dark-wave;
+    padding-right: 27px;
   }
+}
+
+.lead__link--interior:hover {
+  padding-bottom: 36px;
+  background-color: @light-hover-wave;
+  margin-top: -5px;
+
+  & svg g {
+    opacity: 0.7;
+  }
+}
+
+.lead__link--toys:hover {
+  padding-bottom: 36px;
+  background-color: @dark-hover-wave;
+  margin-top: -5px;
+
+  & svg path {
+    opacity: 0.7;
+  }
+}
+
+.lead__link--interior:active {
+  padding-bottom: 31px;
+  background-color: @light-hover-wave;
+  margin-top: 0;
+
+  & svg g {
+    opacity: 0.3;
+  }
+}
+
+.lead__link--toys:active {
+  padding-bottom: 31px;
+  background-color: @dark-hover-wave;
+  margin-top: 0;
+
+  & svg path {
+    opacity: 0.3;
+  }
+}
+
+.lead__image {
+  display: block;
 }
 
 @media (min-width: @tablet-width) {
@@ -49,6 +96,20 @@
     background-size: 100% auto;
     padding-left: 50px;
     padding-right: 50px;
+  }
+
+  .lead__wrapper {
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 24px;
+      position: absolute;
+      bottom: -10px;
+      background-image: url("../img/zigzag-fill-tablet.svg");
+      background-repeat: repeat;
+    }
   }
 
   .lead__link-wrapper {
@@ -70,5 +131,15 @@
     width: 1050px;
     height: 763px;
     background-size: 100% auto;
+  }
+
+  .lead__wrapper::after {
+    content: "";
+    width: 100%;
+    height: 34px;
+    position: absolute;
+    bottom: -10px;
+    background-image: url("../img/zigzag-fill-desktop.svg");
+    background-repeat: repeat;
   }
 }

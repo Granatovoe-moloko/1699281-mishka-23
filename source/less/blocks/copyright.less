@@ -1,15 +1,33 @@
 .copyright {
+  width: 185px;
   display: flex;
+  align-items: center;
+  margin: 0 auto;
   margin-top: 50px;
 }
 
 .copyright__descripion {
   .text-sizes(19px; 18px);
-  margin-right: 27px;
+}
+
+.copyright__link {
+  padding-left: 28px;
+  padding-top: 10px;
+  display: block;
+  flex-grow: 1;
+  height: 100%;
+
+  &:hover svg path {
+    fill: @dark-hover-wave;
+  }
+
+  &:active svg path {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .copyright {
-    margin-top: 0;
+    margin: 0;
   }
 }
