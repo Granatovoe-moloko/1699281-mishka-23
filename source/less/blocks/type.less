@@ -14,6 +14,44 @@
 
 .type__name {
   .text-sizes(17px; 18px);
+  position: relative;
+  padding-left: 61px;
+  display: block;
+}
+
+.type__input + label::before {
+  content: "";
+  position: absolute;
+  .sizes(38px; 38px);
+  left: 0;
+  top: -10px;
+  border: 2px solid @gray;
+  border-radius: 50%;
+
+  &:active {
+    border: 2px solid @black-30;
+  }
+}
+
+.type__input + label {
+  &:hover::before {
+    border: 2px solid @light-wave;
+  }
+
+  &:active::before {
+    border: 2px solid @black-30;
+  }
+}
+
+
+.type__input:checked + label::after {
+  content: "";
+  position: absolute;
+  .sizes(18px; 18px);
+  left: 12px;
+  top: 2px;
+  background-color: @light-wave;
+  border-radius: 50%;
 }
 
 @media (min-width: @tablet-width) {

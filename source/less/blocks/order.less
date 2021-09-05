@@ -1,6 +1,5 @@
 .order__fieldset {
   border: none;
-  border-top: 1px solid @light-wave;
   margin: 0;
   margin-top: 30px;
   padding: 0;
@@ -22,11 +21,48 @@
   .sizes(260px; 52px);
   font-weight: 700;
   margin-top: 30px;
+
+  &:hover {
+    background-color: @gray;
+    color: @white;
+  }
+
+  &:active {
+    color: @button-gray;
+  }
+}
+
+@media (max-width: 767px) {
+  .order__title,
+  .user-contact__name[for="phone"] {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      .sizes(200px; 1px);
+      background-color: @light-wave;
+      top: 10px;
+      left: 60px;
+    }
+  }
+
+  .user-contact__name[for="email"] {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      .sizes(182px; 1px);
+      background-color: @light-wave;
+      top: 10px;
+      left: 78px;
+    }
+  }
 }
 
 @media (min-width: @tablet-width) {
   .order__fieldset {
-    border: none;
     display: grid;
     grid-template-columns: 170px auto;
     grid-template-rows: auto;

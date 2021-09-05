@@ -40,14 +40,37 @@
   border: none;
   border-bottom: 2px solid @gray;
   padding: 0;
+  outline: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    border-bottom: 2px solid @light-wave;
+  }
+}
+
+.user-info__input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .user-info__input-addition {
-  width: 256px;
+  width: 222px;
   border: 2px solid @gray;
-  padding: 0;
+  padding: 17px;
   margin: 0;
   margin-top: 30px;
+  color: rgba(0, 0, 0, 0.3);
+  outline: none;
+
+  &:focus {
+    color: @black;
+    border: 2px solid @light-wave;
+  }
+
+  &:hover,
+  &:active {
+    border: 2px solid @light-wave;
+  }
 }
 
 .user-info__note {
@@ -91,7 +114,7 @@
   }
 
   .user-info__input-addition {
-    width: 501px;
+    width: 463px;
   }
 
   .user-info__note {
@@ -110,7 +133,7 @@
   }
 
   .user-info__input-addition {
-    width: 700px;
+    width: 662px;
   }
 
   .user-info__note {

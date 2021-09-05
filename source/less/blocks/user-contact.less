@@ -21,6 +21,31 @@
 .user-contact__item {
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.user-contact__sign-phone {
+  position: absolute;
+  top: 60px;
+  right: 0;
+}
+
+.user-contact__sign-email {
+  position: absolute;
+  top: 70px;
+  right: 0;
+}
+
+.user-contact__input:hover,
+.user-contact__input:focus {
+  & + svg path {
+    fill: @light-wave;
+    opacity: 1;
+  }
+
+  & + svg g {
+    opacity: 1;
+  }
 }
 
 .user-contact__input {
@@ -28,6 +53,17 @@
   border: none;
   border-bottom: 2px solid @gray;
   padding: 0;
+  outline: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    border-bottom: 2px solid @light-wave;
+  }
+}
+
+.user-contact__input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .user-contact__name {
@@ -69,6 +105,16 @@
     width: 501px;
     background-color: @light-gray;
   }
+
+  .user-contact__sign-phone {
+    top: 15px;
+    right: 17px;
+  }
+
+  .user-contact__sign-email {
+    top: 15px;
+    right: 15px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -83,5 +129,13 @@
 
   .user-contact__input {
     width: 700px;
+  }
+
+  .user-contact__sign-phone {
+    right: 0;
+  }
+
+  .user-contact__sign-email {
+    right: 0;
   }
 }
