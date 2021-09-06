@@ -9,6 +9,7 @@
 .article__name {
   .text-sizes(17px; 24px);
   margin: 0;
+  display: block;
 
   &:hover {
     opacity: 0.6;
@@ -67,6 +68,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .article {
+    display: flex;
+  }
+
   .article__image {
     .sizes(334px; 334px);
   }
@@ -112,6 +117,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .article {
+    flex-direction: column;
+  }
+
   .article__image {
     .sizes(316px; 462px);
   }

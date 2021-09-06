@@ -1,6 +1,11 @@
-.color__fieldset-wrapper {
-  width: @mobile-width;
+.color {
+  width: 260px;
   margin: 0 auto;
+  border: none;
+  margin-top: 30px;
+  padding: 0;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .color__list {
@@ -56,8 +61,14 @@
     padding-top: 66px;
   }
 
-  .color__fieldset-wrapper {
-    width: @tablet-width;
+  .color {
+    width: 668px;
+    display: grid;
+    grid-template-columns: 170px auto;
+    grid-template-rows: auto;
+    margin-top: 66px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   .color__list {
@@ -81,8 +92,10 @@
 }
 
 @media (min-width: @desktop-width) {
-  .color__fieldset-wrapper {
-    width: @desktop-width;
+  .color {
+    width: 956px;
+    padding-left: 97px;
+    padding-right: 97px;
   }
 
   .color__item {
