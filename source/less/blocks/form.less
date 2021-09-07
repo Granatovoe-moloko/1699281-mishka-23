@@ -34,6 +34,18 @@
   .form__title {
     .text-sizes(43px; 50px);
     padding: 100px 0 75px 0;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 24px;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      background-image: url("../img/zigzag-fill-tablet.svg");
+      background-repeat: repeat;
+    }
   }
 }
 
@@ -51,5 +63,15 @@
   .form__title {
     .text-sizes(53px; 57px);
     padding: 102px 0 96px 0;
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 34px;
+      position: absolute;
+      bottom: -10px;
+      background-image: url("../img/zigzag-fill-desktop.svg");
+      background-repeat: repeat;
+    }
   }
 }

@@ -1,6 +1,11 @@
-.color__fieldset-wrapper {
-  width: @mobile-width;
+.color {
+  width: 260px;
   margin: 0 auto;
+  border: none;
+  margin-top: 30px;
+  padding: 0;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .color__list {
@@ -10,15 +15,41 @@
 }
 
 .color__item {
-  margin-top: 23px;
-
-  &:first-child {
-    margin-top: 25px;
-  }
+  margin-top: 43px;
 }
 
 .color__name {
   .text-sizes(17px; 18px);
+  position: relative;
+  padding-left: 61px;
+}
+
+.color__checkbox + label::before {
+  content: "";
+  position: absolute;
+  .sizes(34px; 34px);
+  top: -10px;
+  left: 0;
+  border: 2px solid @gray;
+}
+
+.color__checkbox + label {
+  &:hover::before {
+    border: 2px solid @light-wave;
+  }
+
+  &:active::before {
+    border: 2px solid @black-30;
+  }
+}
+
+.color__checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  .sizes(23px; 16px);
+  top: 2px;
+  left: 7px;
+  background: url("../img/tick.svg") no-repeat 0 0;
 }
 
 @media (min-width: @tablet-width) {
@@ -30,8 +61,14 @@
     padding-top: 66px;
   }
 
-  .color__fieldset-wrapper {
-    width: @tablet-width;
+  .color {
+    width: 668px;
+    display: grid;
+    grid-template-columns: 170px auto;
+    grid-template-rows: auto;
+    margin-top: 66px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   .color__list {
@@ -55,8 +92,10 @@
 }
 
 @media (min-width: @desktop-width) {
-  .color__fieldset-wrapper {
-    width: @desktop-width;
+  .color {
+    width: 956px;
+    padding-left: 97px;
+    padding-right: 97px;
   }
 
   .color__item {

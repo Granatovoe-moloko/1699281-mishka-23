@@ -19,9 +19,34 @@
   padding-right: 30px;
 }
 
+.catalog__link {
+  color: @black;
+  text-decoration: none;
+}
+
+.catalog__item:hover .article__info {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.catalog__item:active .article__info {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
 @media (min-width: @tablet-width) {
   .catalog__title {
     .text-sizes(43px; 50px);
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 24px;
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      background-image: url("../img/zigzag-fill-tablet.svg");
+      background-repeat: repeat;
+    }
   }
 
   .catalog__wrapper {
@@ -32,11 +57,25 @@
     padding-left: 50px;
     padding-right: 50px;
   }
+
+  .catalog__link {
+    display: flex;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .catalog__title {
     .text-sizes(53px; 57px);
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 34px;
+      position: absolute;
+      bottom: -10px;
+      background-image: url("../img/zigzag-fill-desktop.svg");
+      background-repeat: repeat;
+    }
   }
 
   .catalog__wrapper {
@@ -46,5 +85,9 @@
   .catalog__list {
     display: flex;
     justify-content: space-between;
+  }
+
+  .catalog__link {
+    display: block;
   }
 }
