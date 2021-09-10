@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Мишка</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/180.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page__body">
@@ -18,7 +22,7 @@
         <nav class="header-nav header-nav--opened header-nav--nojs">
           <h2 class="header-nav__heading visually-hidden">Меню сайта</h2>
           <button class="header-nav__button" type="button"></button>
-          <ul class="menu-list header-nav__list">
+          <ul class="menu-list">
             <li class="menu-list__item">
               <a class="menu-list__link" href="catalog.html">Каталог товаров</a>
             </li>
@@ -27,7 +31,7 @@
             </li>
             <li class="menu-list__item">
               <a class="menu-list__link" href="">
-                <svg class="menu-list__search" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="menu-list__icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path opacity="0.2" d="M17.6932 16.0568L14.2159 12.5795C15.2386 11.25 15.75 9.61364 15.75 7.875C15.75 3.47727 12.2727 0 7.875 0C3.47727 0 0 3.47727 0 7.875C0 12.2727 3.47727 15.75 7.875 15.75C9.61364 15.75 11.25 15.1364 12.5795 14.2159L16.0568 17.6932C16.2614 17.8977 16.4659 18 16.875 18C17.4886 18 18 17.4886 18 16.875C18 16.6705 17.8977 16.3636 17.6932 16.0568ZM2.25 7.875C2.25 4.80682 4.80682 2.25 7.875 2.25C10.9432 2.25 13.5 4.80682 13.5 7.875C13.5 10.9432 10.9432 13.5 7.875 13.5C4.80682 13.5 2.25 10.9432 2.25 7.875Z" fill="black"/>
                 </svg>
                 Поиск по сайту
@@ -35,7 +39,7 @@
             </li>
             <li class="menu-list__item">
               <a class="menu-list__link" href="">
-                <svg class="menu-list__cart" width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="menu-list__icon" width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path opacity="0.2" d="M20.1884 6.85716H16.6377L13.1884 0.380944C12.9855 -8.61287e-06 12.5797 -0.0952351 12.1739 0.0952412C11.7681 0.285717 11.6667 0.66667 11.8696 1.04762L15.0145 6.85716H5.7826L8.92753 1.04762C9.13043 0.66667 8.92754 0.285717 8.6232 0.0952412C8.2174 -0.0952351 7.8116 0.0952295 7.6087 0.380944L4.1594 6.85716H0.811583C0.405785 6.85716 0 7.14286 0 7.61905C0 8 0.304336 8.38094 0.811583 8.38094H1.01449L1.92753 11.2381C1.72463 11.3333 1.62317 11.5238 1.62317 11.8095C1.62317 12.1905 1.92753 12.4762 2.33332 12.4762L4.05797 18H16.942L18.6667 12.4762C19.0725 12.4762 19.3768 12.1905 19.3768 11.8095C19.3768 11.619 19.2754 11.3333 19.0725 11.2381L19.9855 8.38094H20.1884C20.5942 8.38094 21 8.09524 21 7.61905C21 7.14286 20.5942 6.85716 20.1884 6.85716ZM15.6232 16.4762H5.07247L3.85506 12.381H16.942L15.6232 16.4762ZM17.2464 10.9524H3.34782L2.53623 8.28573H18.058L17.2464 10.9524Z" fill="black"/>
                 </svg>
                 Корзина: пока пуста
@@ -47,25 +51,25 @@
     </header>
 
     <main class="form">
-      <h1 class="form__title">Вязание на заказ</h1>
+      <h1 class="form__heading">Вязание на заказ</h1>
       <div class="form__annotation-wrapper">
         <p class="form__annotation">
           Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
         </p>
       </div>
 
-      <form method="get" action="https://echo.htmlacademy.ru" class="form__order order">
+      <form  class="order" method="get" action="https://echo.htmlacademy.ru">
         <div class="type__wrapper">
           <fieldset class="order__fieldset type">
             <legend class="order__title">ТИП</legend>
             <div class="order__container">
-              <div class="type__accessories-container">
-                <input class="type__input visually-hidden" type="radio" name="type" id="accessories" checked>
-                <label class="type__name type__name--accessories" for="accessories">Аксессуар для интерьера</label>
+              <div class="type__container">
+                <input class="type__radiobutton visually-hidden" type="radio" name="type" id="accessories" checked>
+                <label class="type__label" for="accessories">Аксессуар для интерьера</label>
               </div>
-              <div class="type__toy-container">
-                <input class="type__input visually-hidden" type="radio" name="type" id="toy">
-                <label class="type__name type__name--toy" for="toy">Детская игрушка</label>
+              <div class="type__container">
+                <input class="type__radiobutton visually-hidden" type="radio" name="type" id="toy">
+                <label class="type__label" for="toy">Детская игрушка</label>
               </div>
             </div>
           </fieldset>
@@ -77,27 +81,27 @@
             <ul class="color__list">
               <li class="color__item">
                 <input class="color__checkbox visually-hidden" type="checkbox" name="white" id="white" checked>
-                <label class="color__name" for="white">Белый</label>
+                <label class="color__label" for="white">Белый</label>
               </li>
               <li class="color__item">
                 <input class="color__checkbox visually-hidden" type="checkbox" name="gray" id="gray" checked>
-                <label class="color__name" for="gray">Серый</label>
+                <label class="color__label" for="gray">Серый</label>
               </li>
               <li class="color__item">
                 <input class="color__checkbox visually-hidden" type="checkbox" name="tiffany" id="tiffany">
-                <label class="color__name" for="tiffany">«Тиффани»</label>
+                <label class="color__label" for="tiffany">«Тиффани»</label>
               </li>
               <li class="color__item">
                 <input class="color__checkbox visually-hidden" type="checkbox" name="black" id="black">
-                <label class="color__name" for="black">Черный</label>
+                <label class="color__label" for="black">Черный</label>
               </li>
               <li class="color__item">
                 <input class="color__checkbox visually-hidden" type="checkbox" name="pink" id="pink">
-                <label class="color__name" for="pink">Розовый</label>
+                <label class="color__label" for="pink">Розовый</label>
               </li>
               <li class="color__item">
                 <input class="color__checkbox visually-hidden" type="checkbox" name="orange" id="orange">
-                <label class="color__name" for="orange">Оранжевый</label>
+                <label class="color__label" for="orange">Оранжевый</label>
               </li>
             </ul>
           </fieldset>
@@ -108,15 +112,15 @@
             <legend class="order__title">ФИО</legend>
             <ul class="user-info__list">
               <li class="user-info__item">
-                <label class="user-info__name" for="name">Имя:</label>
+                <label class="user-info__label" for="name">Имя:</label>
                 <input class="user-info__input" type="text" name="name" id="name" placeholder="Введите ваше имя*">
               </li>
               <li class="user-info__item">
-                <label class="user-info__name" for="surname">Фамилия:</label>
+                <label class="user-info__label" for="surname">Фамилия:</label>
                 <input class="user-info__input" type="text" name="surname" id="surname" placeholder="Укажите фамилию*">
               </li>
               <li class="user-info__item">
-                <label class="user-info__name" for="patronymic">Отчество:</label>
+                <label class="user-info__label" for="patronymic">Отчество:</label>
                 <input class="user-info__input" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
               </li>
             </ul>
@@ -128,9 +132,9 @@
             <legend class="visually-hidden">Контакты пользователя</legend>
             <ul class="user-contact__list">
               <li class="user-contact__item user-contact__item--phone">
-                <label class="user-contact__name" for="phone">тел</label>
+                <label class="user-contact__label" for="phone">тел</label>
                 <input class="user-contact__input" type="text" name="phone" id="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
-                <svg class="user-contact__sign-phone" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="user-contact__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g opacity="0.2">
                   <path d="M17.4395 24C17.0363 24 16.7339 24 16.3306 24C11.3911 23.4074 7.7621 21.1358 5.14113 18.2717C2.52016 15.4075 0.403226 11.7532 0 6.7162C0 6.22237 0 5.82731 0 5.33349C0.100806 4.44461 0.504032 3.85202 1.10887 3.25943C1.71371 2.56808 2.72177 1.77796 3.62903 1.6792C4.33468 1.6792 5.44355 2.17302 5.84677 2.76561C6.25 3.25943 6.45161 4.34584 6.65323 5.13596C6.85484 6.02484 7.25806 7.11125 7.15726 7.90137C6.95565 9.08655 5.34274 9.58037 4.93952 10.4693C6.55242 14.1235 9.07258 16.889 12.5 18.6667C13.3065 18.1729 14.1129 16.7902 15.3226 16.7902C15.7258 16.7902 16.3306 16.9877 16.7339 17.0865C17.2379 17.1852 17.6411 17.3828 18.0444 17.5803C18.75 17.8766 20.0605 18.1729 20.4637 18.7655C20.8669 19.3581 21.1694 20.3457 21.0685 20.9383C20.7661 22.2222 18.6492 23.6049 17.4395 24Z" fill="black"/>
                   <path d="M12.6008 1.48147C18.5484 1.48147 23.4879 6.22217 23.4879 12.1481H25C25 5.43205 19.4556 0 12.6008 0V1.48147Z" fill="black"/>
@@ -140,9 +144,9 @@
                 </svg>
               </li>
               <li class="user-contact__item user-contact__item--email">
-                <label class="user-contact__name" for="email">E-mail</label>
+                <label class="user-contact__label" for="email">E-mail</label>
                 <input class="user-contact__input" type="text" name="email" id="email" placeholder="Ваш Email*">
-                <svg class="user-contact__sign-email" width="32" height="21" viewBox="0 0 32 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="user-contact__icon user-contact__icon--email" width="32" height="21" viewBox="0 0 32 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path opacity="0.2" d="M28 0H4C1.8 0 0 1.8 0 4V17C0 19.2 1.8 21 4 21H28C30.2 21 32 19.2 32 17V4C32 1.8 30.2 0 28 0ZM2 5.3L9 10.6L2 15.9V5.3ZM30 17C30 18.1 29.1 19 28 19H4C2.9 19 2 18.1 2 17L9.8 11.1L14.2 14.4C14.7 14.8 15.4 15 16 15C16.6 15 17.3 14.8 17.8 14.4L22.2 11.1L30 17ZM30 15.8L23 10.5L30 5.2V15.8ZM17.2 13.6C16.8 13.9 16.4 14 16 14C15.6 14 15.1 13.9 14.8 13.6L10.7 10.5L9.9 9.9L2 4C2 2.9 2.9 2 4 2H28C29.1 2 30 2.9 30 4L17.2 13.6Z" fill="black"/>
                 </svg>
               </li>
@@ -155,7 +159,7 @@
             <legend class="order__title">Доп</legend>
             <ul class="user-info__list">
               <li class="user-info__item">
-                <label class="user-info__name--other visually-hidden" for="addition">Доп</label>
+                <label class="visually-hidden" for="addition">Доп</label>
                 <textarea class="user-info__input-addition" name="addition" id="addition" rows="5">Опишите все ваши пожелания к заказу</textarea>
               </li>
             </ul>
@@ -183,7 +187,7 @@
           </svg>
         </a>
         <h2 class="footer__heading visually-hidden">Мы в социальных сетях</h2>
-        <ul class="footer__socials socials">
+        <ul class="socials">
           <li class="socials__item">
             <a class="socials__link" href="">
               <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -206,7 +210,7 @@
             </a>
           </li>
         </ul>
-        <div class="footer__copyright copyright">
+        <div class="copyright">
           <p class="copyright__descripion">Разработано</p>
           <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">
             <svg width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
