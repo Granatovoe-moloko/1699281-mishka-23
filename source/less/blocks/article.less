@@ -59,18 +59,22 @@
   margin-top: 41px;
 }
 
+.article__button-icon use {
+  opacity: 0.2;
+}
+
 .article__button {
   .sizes(30px; 30px);
   margin-top: 41px;
   background-color: transparent;
   border: none;
 
-  &:hover svg path {
+  &:hover svg use {
     opacity: 1;
-    fill: @light-wave;
+    fill: @wave;
   }
 
-  &:active svg path {
+  &:active svg use {
     opacity: 0.3;
   }
 }

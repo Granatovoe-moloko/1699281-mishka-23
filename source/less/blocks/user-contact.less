@@ -29,6 +29,10 @@
   right: 0;
   top: 60px;
 
+  & use {
+    opacity: 0.2;
+  }
+
   &--email {
     top: 70px;
   }
@@ -36,12 +40,8 @@
 
 .user-contact__input:hover,
 .user-contact__input:focus {
-  & + svg path {
+  & + svg use {
     fill: @light-wave;
-    opacity: 1;
-  }
-
-  & + svg g {
     opacity: 1;
   }
 }
