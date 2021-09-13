@@ -10,6 +10,10 @@
   .text-sizes(19px; 18px);
 }
 
+.copyright__icon {
+  fill: @wave;
+}
+
 .copyright__link {
   padding-left: 28px;
   padding-top: 10px;
@@ -17,11 +21,11 @@
   flex-grow: 1;
   height: 100%;
 
-  &:hover svg path {
+  &:hover svg use {
     fill: @dark-hover-wave;
   }
 
-  &:active svg path {
+  &:active svg use {
     opacity: 0.3;
   }
 }

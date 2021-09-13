@@ -8,16 +8,20 @@
   margin: 0 auto;
 }
 
+.socials__link-icon {
+  fill: @dark;
+}
+
 .socials__item {
   flex-grow: 1;
   height: 100%;
   text-align: center;
 
-  &:hover svg path {
+  &:hover svg use {
     fill: @dark-hover-wave;
   }
 
-  &:active svg path {
+  &:active svg use {
     opacity: 0.3;
   }
 }
