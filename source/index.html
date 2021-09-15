@@ -9,14 +9,24 @@
     <link rel="apple-touch-icon" href="img/favicons/180.png">
     <link rel="manifest" href="manifest.webmanifest">
     <link href="css/style.min.css" rel="stylesheet">
+    <link rel="preload" href="fonts/opensans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   </head>
   <body class="page__body">
 
     <header class="header">
       <div class="header__wrapper">
-        <section class="logo header__logo">
-          <a href="" class="logo__link">
-            <img class="logo__image" src="img/mishka-logo-mobile.svg" width="86" height="35" alt="логотип сайта Мишка">
+        <section class="header__logo">
+          <a href="" class="header__logo-link">
+            <svg class="header__logo-image header__logo-image--mobile" width="86" height="35">
+              <use xlink:href="img/sprite.svg#mishka-mobile"></use>
+            </svg>
+            <svg class="header__logo-image header__logo-image--tablet" width="114" height="46">
+              <use xlink:href="img/sprite.svg#mishka-tablet"></use>
+            </svg>
+            <svg class="header__logo-image header__logo-image--desktop" width="149" height="72">
+              <use xlink:href="img/sprite.svg#mishka-desktop"></use>
+            </svg>
           </a>
         </section>
         <nav class="header-nav header-nav--opened header-nav--nojs">
@@ -24,30 +34,43 @@
           <button class="header-nav__button" type="button"></button>
           <ul class="menu-list">
             <li class="menu-list__item">
-              <a class="menu-list__link" href="catalog.html">
+              <a class="menu-list__link menu-list__link--catalog" href="catalog.html">
                 <span class="menu-list__text">Каталог товаров</span>
               </a>
             </li>
-            <li class="menu-list__item">
-              <a class="menu-list__link" href="form.html">
+            <li class="menu-list__item menu-list__item--order">
+              <a class="menu-list__link menu-list__link--order" href="form.html">
                 <span class="menu-list__text">Вязание на заказ</span>
               </a>
             </li>
             <li class="menu-list__item">
-              <a class="menu-list__link" href="">
-                <svg class="menu-list__icon" width="18" height="18">
+              <a class="menu-list__link menu-list__link--search" href="">
+                <svg class="menu-list__icon menu-list__icon--search" width="18" height="18">
                   <use xlink:href="img/sprite.svg#search"></use>
                 </svg>
-                <span class="menu-list__text">Поиск по сайту</span>
+                <span class="menu-list__text menu-list__text--search">Поиск по сайту</span>
               </a>
             </li>
             <li class="menu-list__item">
               <a class="menu-list__link" href="">
-                <svg class="menu-list__icon" width="21" height="18">
+                <svg class="menu-list__icon menu-list__icon--cart" width="21" height="18">
                   <use xlink:href="img/sprite.svg#cart"></use>
                 </svg>
                 <span class="menu-list__text">Корзина: пока пуста</span>
               </a>
+            </li>
+            <li class="menu-list__item menu-list__item--desktop">
+              <a class="menu-list__link menu-list__link--desktop" href="">
+                <span class="menu-list__text">Новые поступления</span>
+              </a>
+            </li>
+            <li class="menu-list__item menu-list__item--desktop">
+              <a class="menu-list__link menu-list__link--desktop" href="">
+                <span class="menu-list__text">Распродажа</span>
+              </a>
+            </li>
+            <li class="menu-list__item menu-list__item--tablet">
+              <span class="menu-list__text">Бесплатная доставка по России</span>
             </li>
           </ul>
         </nav>
@@ -160,11 +183,7 @@
         </div>
 
         <section class="contacts__map">
-          <picture>
-            <source media="(min-width: 1150px)" srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x">
-            <img class="contacts__map-image" src="img/map.jpg" srcset="img/map@2x.jpg 2x" width="320" height="454" alt="карта с адресом г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101">
-          </picture>
+          <iframe class="contacts__map-image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002637!2d30.320858715453827!3d59.93871916905495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1631630532313!5m2!1sru!2sru"  style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
         </section>
         <div class="contacts__feedback-container">
           <section class="contacts__feedback">
