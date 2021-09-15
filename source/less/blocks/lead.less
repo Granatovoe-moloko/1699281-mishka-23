@@ -1,4 +1,4 @@
-.lead {
+.lead__wrapper {
   width: @mobile-width;
   margin: 0 auto;
   background: @super-light-gray url("../img/main-background.jpg") center -17px no-repeat;
@@ -14,7 +14,7 @@
   }
 }
 
-.lead__wrapper {
+.lead {
   background-color: @light-gray;
   width: 100%;
   border-top: 1px solid @black-10;
@@ -96,7 +96,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .lead {
+  .lead__wrapper {
     width: 668px;
     height: 592px;
     background-size: 768px auto;
@@ -111,7 +111,7 @@
     }
   }
 
-  .lead__wrapper {
+  .lead {
     position: relative;
 
     &::after {
@@ -158,7 +158,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .lead {
+  .lead__wrapper {
     width: 1050px;
     height: 589px;
     padding-top: 157px;
@@ -170,7 +170,7 @@
     .text-sizes(53px; 57px);
   }
 
-  .lead__wrapper::after {
+  .lead::after {
     content: "";
     width: 100%;
     height: 34px;
