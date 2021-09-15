@@ -9,14 +9,24 @@
     <link rel="apple-touch-icon" href="img/favicons/180.png">
     <link rel="manifest" href="manifest.webmanifest">
     <link href="css/style.min.css" rel="stylesheet">
+    <link rel="preload" href="fonts/opensans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   </head>
   <body class="page__body">
 
     <header class="header">
       <div class="header__wrapper">
         <section class="logo header__logo">
-          <a href="index.html" class="logo__link">
-            <img class="logo__image" src="img/mishka-logo-mobile.svg" width="86" height="35" alt="логотип сайта Мишка">
+          <a href="index.html" class="header__logo-link">
+            <svg class="header__logo-image header__logo-image--mobile" width="86" height="35">
+              <use xlink:href="img/sprite.svg#mishka-mobile"></use>
+            </svg>
+            <svg class="header__logo-image header__logo-image--tablet" width="114" height="46">
+              <use xlink:href="img/sprite.svg#mishka-tablet"></use>
+            </svg>
+            <svg class="header__logo-image header__logo-image--desktop" width="149" height="72">
+              <use xlink:href="img/sprite.svg#mishka-desktop"></use>
+            </svg>
           </a>
         </section>
         <nav class="header-nav header-nav--opened header-nav--nojs">
@@ -24,30 +34,43 @@
           <button class="header-nav__button" type="button"></button>
           <ul class="menu-list">
             <li class="menu-list__item">
-              <a class="menu-list__link" href="">
+              <a class="menu-list__link menu-list__link--catalog" href="">
                 <span class="menu-list__text">Каталог товаров</span>
               </a>
             </li>
-            <li class="menu-list__item">
-              <a class="menu-list__link" href="form.html">
+            <li class="menu-list__item menu-list__item--order">
+              <a class="menu-list__link menu-list__link--order" href="form.html">
                 <span class="menu-list__text">Вязание на заказ</span>
               </a>
             </li>
             <li class="menu-list__item">
-              <a class="menu-list__link" href="">
-                <svg class="menu-list__icon" width="18" height="18">
+              <a class="menu-list__link menu-list__link--search" href="">
+                <svg class="menu-list__icon menu-list__icon--search" width="18" height="18">
                   <use xlink:href="img/sprite.svg#search"></use>
                 </svg>
-                <span class="menu-list__text">Поиск по сайту</span>
+                <span class="menu-list__text menu-list__text--search">Поиск по сайту</span>
               </a>
             </li>
             <li class="menu-list__item">
               <a class="menu-list__link" href="">
-                <svg class="menu-list__icon" width="21" height="18">
+                <svg class="menu-list__icon menu-list__icon--cart" width="21" height="18">
                   <use xlink:href="img/sprite.svg#cart"></use>
                 </svg>
                 <span class="menu-list__text">Корзина: пока пуста</span>
               </a>
+            </li>
+            <li class="menu-list__item menu-list__item--desktop">
+              <a class="menu-list__link menu-list__link--desktop" href="">
+                <span class="menu-list__text">Новые поступления</span>
+              </a>
+            </li>
+            <li class="menu-list__item menu-list__item--desktop">
+              <a class="menu-list__link menu-list__link--desktop" href="">
+                <span class="menu-list__text">Распродажа</span>
+              </a>
+            </li>
+            <li class="menu-list__item menu-list__item--tablet">
+              <span class="menu-list__text">Бесплатная доставка по России</span>
             </li>
           </ul>
         </nav>
@@ -68,7 +91,7 @@
             </a>
             <div class="article__info">
               <div class="article__block">
-                <a class="article__name article__name--rabbit">Зайчик-попрыгайчик</a>
+                <a href="" class="article__name article__name--rabbit">Зайчик-попрыгайчик</a>
                 <p class="article__description article__description--rabbit">Рост 30 см, вес 200 г</p>
               </div>
               <div class="article__purchase">
@@ -91,7 +114,7 @@
               </a>
             <div class="article__info">
               <div class="article__block">
-                <a class="article__name article__name--laundry-basket">Корзинка для белья</a>
+                <a href="" class="article__name article__name--laundry-basket">Корзинка для белья</a>
                 <p class="article__description article__description--laundry-basket">Диаметр 15 см, высота 10 см</p>
               </div>
               <div class="article__purchase">
@@ -114,7 +137,7 @@
               </a>
             <div class="article__info article__info--big-basket">
               <div class="article__block">
-                <a class="article__name article__name--big-basket">Большая корзинка <br>для игрушек</a>
+                <a href="" class="article__name article__name--big-basket">Большая корзинка <br>для игрушек</a>
                 <p class="article__description article__description--big-basket">Диаметр 30 см, высота 30 см</p>
               </div>
               <div class="article__purchase">

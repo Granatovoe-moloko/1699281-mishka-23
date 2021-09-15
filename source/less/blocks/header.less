@@ -12,3 +12,71 @@
   .sizes(86px; 35px);
   margin: 0 auto;
 }
+
+.header__logo-image {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--tablet,
+  &--desktop {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .header {
+    width: @tablet-width;
+  }
+
+  .header__wrapper {
+    position: relative;
+    padding: 33px 50px 0 50px;
+  }
+
+  .header__logo {
+    position: absolute;
+    top: 22px;
+    z-index: 3;
+  }
+
+  .header__logo-link {
+    display: block;
+    .sizes(100%; 100%);
+  }
+
+  .header__logo-image {
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .header {
+    width: @desktop-width;
+  }
+
+  .header__logo {
+    top: 9px;
+    left: 500px;
+  }
+
+  .header__logo-image {
+    &--tablet {
+      display: none;
+    }
+
+    &--desktop {
+      display: block;
+    }
+  }
+}
