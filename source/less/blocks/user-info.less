@@ -9,6 +9,10 @@
   }
 }
 
+.user-info__wrapper {
+  margin-top: 38px;
+}
+
 .user-info__list {
   list-style: none;
   margin: 0;
@@ -18,10 +22,6 @@
 .user-info__item {
   display: flex;
   flex-direction: column;
-
-  &:first-child .user-info__label {
-    margin-top: 29px;
-  }
 }
 
 .user-info__label {
@@ -33,10 +33,14 @@
     color: @wave;
     margin-top: 35px;
   }
+
+  &--name {
+    margin-top: 29px;
+  }
 }
 
 .user-info__input {
-  height: 52px;
+  height: 49px;
   border: none;
   border-bottom: 2px solid @gray;
   padding: 0;
@@ -56,9 +60,9 @@
 .user-info__input-addition {
   width: 222px;
   border: 2px solid @gray;
-  padding: 17px;
+  padding: 17px 17px 10px 17px;
   margin: 0;
-  margin-top: 30px;
+  margin-top: 20px;
   color: rgba(0, 0, 0, 0.3);
   outline: none;
 
@@ -91,6 +95,10 @@
     }
   }
 
+  .user-info__wrapper {
+    margin-top: 65px;
+  }
+
   .user-info__list {
     grid-column: ~"2/3";
     grid-row: ~"1/2";
@@ -99,27 +107,37 @@
 
   .user-info__item {
     flex-direction: row;
+    margin-top: 0;
 
     &:not(:first-child) {
-      margin-top: 24px;
+      margin-top: 20px;
     }
   }
 
   .user-info__label {
     margin-right: 24px;
+    .text-sizes(19px; 18px);
   }
 
   .user-info__input {
     width: 100%;
+    height: 60px;
+
+    &--surname,
+    &--patronymic {
+      height: 55px;
+    }
   }
 
   .user-info__input-addition {
-    width: 463px;
+    width: 460px;
+    margin-top: 15px;
   }
 
   .user-info__note {
     .text-sizes(17px; 30px);
     padding-right: 50px;
+    max-width: 330px;
   }
 }
 
@@ -130,6 +148,14 @@
 
   .user-info__wrapper {
     padding-right: 225px;
+  }
+
+  .user-info__label {
+    margin-top: 19px;
+
+    &--name {
+      margin-top: 25px;
+    }
   }
 
   .user-info__input-addition {

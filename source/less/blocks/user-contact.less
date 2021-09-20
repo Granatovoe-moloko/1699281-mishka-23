@@ -1,7 +1,6 @@
 .user-contact__wrapper {
   border: none;
   margin: 0;
-  margin-top: 30px;
   padding: 0;
   padding-left: 30px;
   padding-right: 30px;
@@ -26,8 +25,8 @@
 
 .user-contact__icon {
   position: absolute;
-  right: 0;
-  top: 60px;
+  right: 5px;
+  top: 70px;
 
   & use {
     opacity: 0.2;
@@ -47,7 +46,7 @@
 }
 
 .user-contact__input {
-  height: 52px;
+  height: 54px;
   border: none;
   border-bottom: 2px solid @gray;
   padding: 0;
@@ -78,12 +77,16 @@
     padding-right: 50px;
     padding-bottom: 50px;
     margin: 0 auto;
-    margin-top: 66px;
+    margin-top: 50px;
   }
 
   .user-contact {
     width: 100%;
     background-color: @light-gray;
+  }
+
+  .user-contact__label {
+    margin-top: 15px;
   }
 
   .user-contact__item {
@@ -97,16 +100,16 @@
   }
 
   .user-contact__input {
-    width: 501px;
+    .sizes(501px; 50px);
     background-color: @light-gray;
   }
 
   .user-contact__icon {
     top: 15px;
-    right: 17px;
+    right: 25px;
 
     &--email {
-      right: 15px;
+      right: 25px;
     }
   }
 }
@@ -114,15 +117,17 @@
 @media (min-width: @desktop-width) {
   .user-contact__wrapper {
     width: 828px;
-    padding-left: 97px;
-    padding-right: 225px;
+    padding-left: 110px;
+    padding-right: 210px;
   }
 
   .user-contact__input {
     width: 700px;
+    margin-right: 12px;
+    height: 48px;
   }
 
   .user-contact__icon {
-    right: 0;
+    right: 20px;
   }
 }

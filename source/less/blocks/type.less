@@ -4,10 +4,10 @@
 }
 
 .type__container {
-  margin-top: 24px;
+  margin-top: 22px;
 
   &:first-child {
-    margin-top: 42px;
+    margin-top: 33px;
   }
 }
 
@@ -22,8 +22,8 @@
   content: "";
   position: absolute;
   .sizes(38px; 38px);
-  left: 0;
-  top: -10px;
+  left: -1px;
+  top: -6px;
   border: 2px solid @gray;
   border-radius: 50%;
 
@@ -47,8 +47,8 @@
   content: "";
   position: absolute;
   .sizes(18px; 18px);
-  left: 12px;
-  top: 2px;
+  left: 11px;
+  top: 6px;
   background-color: @light-wave;
   border-radius: 50%;
 }
@@ -68,6 +68,19 @@
 
   .type__label {
     .text-sizes(19px; 18px);
+    padding-left: 77px;
+  }
+
+  .type__radiobutton + label::before {
+    .sizes(44px; 44px);
+    left: 1px;
+    top: -13px;
+  }
+
+  .type__radiobutton:checked + label::after {
+    .sizes(21px; 21px);
+    left: 14px;
+    top: 0;
   }
 }
 

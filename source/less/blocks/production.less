@@ -1,7 +1,6 @@
 .production {
   width: @mobile-width;
-  margin: 0 auto;
-  margin-top: 30px;
+  margin: 30px auto 15px auto;
 }
 
 .production__wrapper {
@@ -71,7 +70,7 @@
 }
 
 .production__order-button {
-  .sizes(188px; 48px);
+  .sizes(192px; 52px);
   .text-sizes(18px; 16px);
   border: 2px solid @gray;
   color: @gray;
@@ -79,7 +78,7 @@
   text-align: center;
   .font-family();
   font-weight: 700;
-  margin-top: 18px;
+  margin-top: 41px;
   text-transform: uppercase;
 
   &:hover {
@@ -95,6 +94,8 @@
 @media (min-width: @tablet-width) {
   .production {
     width: @tablet-width;
+    margin-top: 53px;
+    margin-bottom: 30px;
   }
 
   .production__wrapper {
@@ -133,15 +134,16 @@
   .production__container {
     grid-row: ~"3/4";
     border-top: none;
-    padding: 25px 17px 46px 40px;
+    padding: 2px 17px 45px 40px;
   }
 
   .production__text {
+    width: 580px;
     .text-sizes(15px; 30px);
   }
 
   .production__order-button {
-    .sizes(580px; 48px);
+    .sizes(584px; 52px);
     .text-sizes(17px; 16px);
     margin-top: 41px;
   }
@@ -150,6 +152,8 @@
 @media (min-width: @desktop-width) {
   .production {
     width: @desktop-width;
+    margin-top: 57px;
+    margin-bottom: 70px;
   }
 
   .production__wrapper {
@@ -188,8 +192,12 @@
     padding: 28px 36px 60px 80px;
   }
 
+  .production__text {
+    width: auto;
+  }
+
   .production__order-button {
-    .sizes(226px; 48px);
+    .sizes(230px; 52px);
     .text-sizes(17px; 16px);
     margin-top: 52px;
   }

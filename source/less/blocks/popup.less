@@ -40,15 +40,18 @@
 }
 
 .popup__heading {
+  width: 160px;
   .text-sizes(25px; 30px);
   margin: 0 auto;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .popup__legend {
   .text-sizes(15px; 30px);
   color: @gray;
   font-weight: 400;
+  margin: 0 auto;
 }
 
 .popup__list {
@@ -69,6 +72,8 @@
   border: none;
   margin-top: 31px;
   padding: 0;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 @media (min-width: @tablet-width) {
@@ -80,12 +85,18 @@
   }
 
   .popup__wrapper {
-    padding: 0 108px 0 108px;
+    padding: 0 92px 0 92px;
   }
 
   .popup__heading {
+    width: 381px;
     .text-sizes(30px; 57px);
     margin-top: 38px;
+  }
+
+  .popup__form {
+    padding: 0 16px 0 16px;
+    margin-top: 0;
   }
 
   .popup__legend {

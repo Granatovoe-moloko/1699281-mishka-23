@@ -27,6 +27,7 @@
     content: "";
     position: absolute;
     top: -55px;
+    left: 10px;
     .sizes(33px; 38px);
     background-image: url("../img/about-icons/icon-1.svg");
     background-repeat: no-repeat;
@@ -44,7 +45,8 @@
   &--likes::before {
     content: "";
     position: absolute;
-    top: -55px;
+    top: -52px;
+    left: 7px;
     .sizes(34px; 27px);
     background-image: url("../img/about-icons/icon-3.svg");
     background-repeat: no-repeat;
@@ -62,7 +64,8 @@
   &--support::before {
     content: "";
     position: absolute;
-    top: -55px;
+    top: -53px;
+    left: -7px;
     .sizes(55px; 23px);
     background-image: url("../img/about-icons/icon-5.svg");
     background-repeat: no-repeat;
@@ -80,9 +83,7 @@
 
 @media (min-width: @tablet-width) {
   .about__wrapper {
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 83px;
+    padding: 57px 50px 83px 50px;
   }
 
   .about {
@@ -104,8 +105,13 @@
     margin-top: 110px;
     width: 50%;
 
+    &--eco {
+      margin-top: 98px;
+    }
+
     &--love {
       order: 2;
+      margin-top: 98px;
     }
 
     &--style {

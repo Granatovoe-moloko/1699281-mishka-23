@@ -17,7 +17,7 @@
     <header class="header">
       <div class="header__wrapper">
         <section class="header__logo">
-          <a href="index.html" class="header__logo-link">
+          <a href="index.html" class="header__logo-link" aria-label="логотип сайта Мишка, ссылка на главную страницу">
             <svg class="header__logo-image header__logo-image--mobile" width="86" height="35">
               <use xlink:href="img/sprite.svg#mishka-mobile"></use>
             </svg>
@@ -31,7 +31,7 @@
         </section>
         <nav class="header-nav header-nav--closed header-nav--nojs">
           <h2 class="header-nav__heading visually-hidden">Меню сайта</h2>
-          <button class="header-nav__button" type="button"></button>
+          <button class="header-nav__button" type="button" aria-label="открыть/закрыть меню"></button>
           <ul class="menu-list">
             <li class="menu-list__item menu-list__item--catalog">
               <a class="menu-list__link menu-list__link--catalog" href="catalog.html">
@@ -104,7 +104,7 @@
 
         <div class="color">
           <fieldset class="color__wrapper">
-            <legend class="order__title color__title">Цвет</legend>
+            <legend class="color__title">Цвет</legend>
             <ul class="color__list">
               <li class="color__item">
                 <input class="color__checkbox visually-hidden" type="checkbox" name="white" id="white" checked>
@@ -139,16 +139,16 @@
             <legend class="order__title">ФИО</legend>
             <ul class="user-info__list">
               <li class="user-info__item">
-                <label class="user-info__label" for="name">Имя:</label>
+                <label class="user-info__label user-info__label--name" for="name">Имя:</label>
                 <input class="user-info__input" type="text" name="name" id="name" placeholder="Введите ваше имя*">
               </li>
               <li class="user-info__item">
                 <label class="user-info__label" for="surname">Фамилия:</label>
-                <input class="user-info__input" type="text" name="surname" id="surname" placeholder="Укажите фамилию*">
+                <input class="user-info__input user-info__input--surname" type="text" name="surname" id="surname" placeholder="Укажите фамилию*">
               </li>
               <li class="user-info__item">
                 <label class="user-info__label" for="patronymic">Отчество:</label>
-                <input class="user-info__input" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
+                <input class="user-info__input user-info__input--patronymic" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
               </li>
             </ul>
           </fieldset>
@@ -182,7 +182,7 @@
             <ul class="user-info__list">
               <li class="user-info__item">
                 <label class="visually-hidden" for="addition">Доп</label>
-                <textarea class="user-info__input-addition" name="addition" id="addition" rows="5">Опишите все ваши пожелания к заказу</textarea>
+                <textarea class="user-info__input-addition" name="addition" id="addition" rows="6">Опишите все ваши пожелания к заказу</textarea>
               </li>
             </ul>
           </fieldset>
@@ -197,7 +197,7 @@
 
     <footer class="footer">
       <div class="footer__wrapper">
-        <a href="" class="footer__logo-link">
+        <a href="" class="footer__logo-link" aria-label="ссылка-логотип сайта Мишка">
           <svg width="102" height="34">
             <use xlink:href="img/sprite.svg#footer-logo"></use>
           </svg>
@@ -205,21 +205,21 @@
         <h2 class="footer__heading visually-hidden">Мы в социальных сетях</h2>
         <ul class="socials">
           <li class="socials__item">
-            <a class="socials__link" href="">
+            <a class="socials__link" href="" aria-label="ссылка на нас в Инстаграм">
               <svg class="socials__link-icon" width="22" height="22">
                 <use xlink:href="img/sprite.svg#instagram"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
-            <a class="socials__link" href="">
+            <a class="socials__link" href="" aria-label="ссылка на нас в Фэйсбук">
               <svg class="socials__link-icon" width="15" height="28">
                 <use xlink:href="img/sprite.svg#facebook"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
-            <a class="socials__link" href="">
+            <a class="socials__link" href="" aria-label="ссылка на нас в Твиттер">
               <svg class="socials__link-icon" width="23" height="20">
                 <use xlink:href="img/sprite.svg#twitter"></use>
               </svg>
@@ -228,7 +228,7 @@
         </ul>
         <div class="copyright">
           <p class="copyright__descripion">Разработано</p>
-          <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link" aria-label="ссылка на курс htmlacademy">
             <svg class="copyright__icon" width="27" height="35">
               <use xlink:href=img/sprite.svg#htmlacademy></use>
             </svg>

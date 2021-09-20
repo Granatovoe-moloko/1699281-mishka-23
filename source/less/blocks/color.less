@@ -2,10 +2,16 @@
   width: 260px;
   margin: 0 auto;
   border: none;
-  margin-top: 30px;
+  margin-top: 45px;
   padding: 0;
   padding-left: 30px;
   padding-right: 30px;
+}
+
+.color__title {
+  .text-sizes(17px; 16px);
+  text-transform: uppercase;
+  color: @wave;
 }
 
 .color__list {
@@ -16,6 +22,10 @@
 
 .color__item {
   margin-top: 43px;
+
+  &:first-child {
+    margin-top: 36px;
+  }
 }
 
 .color__label {
@@ -52,13 +62,49 @@
   background: url("../img/tick.svg") no-repeat 0 0;
 }
 
+@media (max-width: 767px) {
+  .color__title {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      .sizes(200px; 1px);
+      background-color: @light-wave;
+      top: 7px;
+      left: 60px;
+    }
+  }
+}
+
 @media (min-width: @tablet-width) {
   .color {
     background-color: @light-gray;
   }
 
+  .color__label {
+    .text-sizes(19px; 18px);
+    padding-left: 80px;
+  }
+
+  .color__checkbox + label::before {
+    .sizes(48px; 48px);
+    top: -12px;
+    left: -3px;
+  }
+
+  .color__checkbox:checked + label::after {
+    .sizes(33px; 22px);
+    top: 2px;
+    left: 7px;
+    background: url("../img/tick-tablet.svg") no-repeat 0 0;
+  }
+
   .color__title {
-    padding-top: 66px;
+    padding-top: 68px;
+    grid-column: ~"1/2";
+    grid-row: ~"1/2";
+    margin: 0;
   }
 
   .color__wrapper {
@@ -81,12 +127,18 @@
   }
 
   .color__item {
-    width: 50%;
+    width: 47%;
     margin-top: 57px;
 
     &:first-child,
     &:nth-child(2) {
       margin-top: 0;
+    }
+
+    &:first-child,
+    &:nth-child(3),
+    &:nth-child(5) {
+      width: 53%;
     }
   }
 }
@@ -96,15 +148,34 @@
     width: 956px;
     padding-left: 97px;
     padding-right: 97px;
+    grid-template-columns: 130px auto;
+  }
+
+  .color__title {
+    margin-left: 15px;
   }
 
   .color__item {
-    width: 33%;
+    width: 32%;
+
+    &:first-child,
+    &:nth-child(3),
+    &:nth-child(5) {
+      width: 32%;
+    }
 
     &:first-child,
     &:nth-child(2),
     &:nth-child(3) {
       margin-top: 0;
     }
+  }
+
+  .color__checkbox + label::before {
+    top: -16px;
+  }
+
+  .color__checkbox:checked + label::after {
+    top: 0;
   }
 }

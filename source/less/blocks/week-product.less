@@ -6,6 +6,7 @@
 
 .week-product__heading {
   margin: 0;
+  margin-top: 4px;
   .text-sizes(17px; 20px);
   color: @wave;
 }
@@ -18,7 +19,7 @@
 
 .week-product__text {
   margin: 0;
-  margin-top: 41px;
+  margin-top: 18px;
   .text-sizes(15px; 24px);
   .text400();
 }
@@ -28,18 +29,18 @@
 }
 
 .week-product__image-wrapper {
-  margin-top: 28px;
+  margin-top: 22px;
 }
 
 .week-product__price {
   .text-sizes(17px; 24px);
   text-align: center;
   margin: 0;
-  margin-top: 26px;
+  margin-top: 22px;
 }
 
 .week-product__order-button {
-  .sizes(260px; 48px);
+  .sizes(260px; 52px);
   .text-sizes(18px; 20px);
   border: 2px solid @gray;
   color: @gray;
@@ -63,10 +64,9 @@
 @media (min-width: @tablet-width) {
   .week-product {
     width: 668px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 50px;
     display: grid;
-    grid-template-columns: 334px 234px 100px;
+    grid-template-columns: 292px 262px 114px;
     grid-template-rows: repeat(5, auto);
   }
 
@@ -80,9 +80,10 @@
   .week-product__heading {
     .sizes(100px; 34px);
     .text-sizes(17px; 17px);
+    text-align: center;
     grid-column: ~"3/4";
     grid-row: ~"1/2";
-    margin-left: auto;
+    margin-right: 20px;
   }
 
   .week-product__text {
@@ -96,17 +97,19 @@
   .week-product__price {
     grid-column: ~"1/2";
     .text-sizes(20px; 24px);
-    margin-top: 57px;
+    margin-top: 50px;
   }
 
   .week-product__order-button {
-    .sizes(288px; 48px);
+    .sizes(292px; 52px);
     grid-column: ~"1/2";
     margin-top: 33px;
   }
 
   .week-product__image {
     .sizes(334px; 404px);
+    display: block;
+    margin-left: auto;
   }
 
   .week-product__image-wrapper {
@@ -119,10 +122,10 @@
 @media (min-width: @desktop-width) {
   .week-product {
     width: @desktop-width;
-    grid-template-columns: 225px 350px 525px;
+    grid-template-columns: 225px 292px 583px;
     grid-template-rows: repeat(5, auto);
     padding: 0;
-    margin-top: 54px;
+    margin-top: 70px;
     padding-bottom: 96px;
   }
 
@@ -144,7 +147,7 @@
   }
 
   .week-product__text {
-    margin-top: 35px;
+    margin-top: 30px;
     grid-column: ~"2/3";
     grid-row: ~"2/3";
     .text-sizes(17px; 30px);
@@ -154,13 +157,13 @@
     .text-sizes(20px; 24px);
     grid-column: ~"2/3";
     grid-row: ~"4/5";
-    margin-top: 109px;
+    margin-top: 100px;
   }
 
   .week-product__order-button {
     .sizes(292px; 52px);
     .text-sizes(17px; 20px);
-    margin-top: 33px;
+    margin-top: 30px;
     grid-column: ~"2/3";
     grid-row: ~"5/6";
   }
